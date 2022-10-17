@@ -13,13 +13,13 @@ CREATE TABLE games (
     year INTEGER,
     season TEXT,
     city TEXT
-)
+);
 
 CREATE TABLE nocs (
     id INTEGER,
     abbreviation TEXT,
     name TEXT
-)
+);
 
 CREATE TABLE event_results (
     athlete_id INTEGER,
@@ -27,4 +27,4 @@ CREATE TABLE event_results (
     noc_id INTEGER,
     game_id INTEGER,
     medal TEXT
-)
+);
