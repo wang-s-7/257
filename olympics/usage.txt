@@ -5,7 +5,7 @@ NAME
 	olympics - list matching results in database
 
 SYNOPSIS
-	python3 olympics.py [-h | --help] 
+    python3 olympics.py [-h | --help] 
     python3 olympics.py noc-athletes <noc>
     python3 olympics.py medals-overall [type]
     python3 olympics.py search-athletes <string>
@@ -16,19 +16,20 @@ DESCRIPTION
 OPTIONS
 
 	noc-athletes 
-        Lists all of the athletes from the <noc> provided. If no <noc> is provided, returns all athletes. [noc] can be
-        either the official abbreviation or the full country name. Singapore's NOC abbreviation is SGP. 
+        Lists all of the athletes from the <noc> provided. <noc> is necessary because of the large amount of data. 
+		<noc> can be either the official abbreviation or the full country name. Singapore's NOC abbreviation is SGP. 
         Example: python3 olympics.py noc-athletes USA
 
 	medals-overall
-		Of the NOCs that have won at least one <type> medal, list all the NOCs and the number of [type] medals they have won, 
-        in decreasing order of the number of <type> medals. If no type is specified, the subcommand checks for all medals
-		regardless of <type>.
+		Of the NOCs that have won at least one [type] medal, list all the NOCs and the number of [type] medals they have won, 
+        in decreasing order of the number of [type] medals. If no type is specified, the subcommand returns results 
+		for all medals regardless of [type].
 		Example: python3 olympics.py medals-overall gold
 
 	-h, --help
 		Prints usage statement
 
 	search-athletes
-		Lists all of the athletes whose names contain <string> as well as their NOC.
+		Lists all of the athletes whose names contain <string> as well as their NOC. <string> is necessary because
+		of the large amount of data.
 		Example: python3 olympics.py search-athletes mios

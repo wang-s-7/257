@@ -36,7 +36,7 @@ def get_connection():
         print(e, file=sys.stderr)
         exit()
 
-def get_athletes(search_text):
+def get_noc_athletes(search_text):
     ''' Returns a list of the full names of all the athletes
         in a particular NOC, ordered by the name that appears 
         first on official documents. '''
@@ -183,7 +183,7 @@ def main():
         else:
             search_text = sys.argv[2]
             print(f'========== All athletes from {search_text} ==========')
-            athletes_list = get_athletes(search_text)
+            athletes_list = get_noc_athletes(search_text)
             for athlete in athletes_list:
                 print(athlete)
 
